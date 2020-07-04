@@ -1,5 +1,5 @@
 import { observable, action } from 'mobx';
-import { assign } from '../../utils/object.utils';
+import { assign } from '../../utils/object.util';
 
 export default class RegisterStore {
   @observable zipcode?: number;

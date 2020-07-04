@@ -21,6 +21,11 @@ export default class MainMenu extends React.Component<Props> {
     return setHistory(url);
   }
 
+  logout = () => {
+    const { setHistory } = this.props.router!;
+    return setHistory('/logout');
+  }
+
   render() {
     return (
       <>
@@ -38,6 +43,11 @@ export default class MainMenu extends React.Component<Props> {
                 {item.name}
               </Menu.Item>
             })}
+            <Menu.Menu position="right">
+              <Menu.Item onClick={this.logout}>
+                Sair
+              </Menu.Item>
+            </Menu.Menu>
           </Menu>
         </div>
       </>

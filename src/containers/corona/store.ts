@@ -1,6 +1,6 @@
 import { action, observable, computed } from 'mobx';
 import { getCountries, getSummary, ISummary, ICountryB } from '../../apis/corona.api';
-import { assign } from '../../utils/object.utils';
+import { assign } from '../../utils/object.util';
 
 export default class CoronaStore {
   @observable countryCode: string = '';
