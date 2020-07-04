@@ -17,6 +17,12 @@ export default class StarWarsDetails extends React.Component<RouteComponentProps
   async componentDidMount() {
     const { buildFilmById } = this.props.starWarsDetails;
     const id = Number(this.props.match.params.id);
+
+    if (!id) {
+      this.props.router.push('/');
+      return;
+    }
+
     await buildFilmById(id);
   }
 
