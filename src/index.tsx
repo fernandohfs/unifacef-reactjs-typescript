@@ -11,6 +11,7 @@ import * as store from './mobx';
 import { router } from './mobx';
 
 import './plugins/sentry.plugin';
+import './plugins/one-signal.plugin';
 import 'semantic-ui-css/semantic.min.css';
 import './apis/axios.api';
 
